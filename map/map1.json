@@ -1,0 +1,41 @@
+{
+  "rooms":[
+  {
+    "id":"room1",
+    "desc":"On the wall are these words in red: KILL ALL MONSTERS OR DIE. There is a door to the east.",
+    "e":"room2",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":["gun"],
+    "status":"unlocked"
+  },
+  {
+    "id":"room2",
+    "desc":"You are in another room.",
+    "e":"",
+    "s":"",
+    "w":"room1",
+    "n":"",
+    "obj":[],
+    "status":"unlocked"
+  }
+  ],
+  "enemies":[
+  {
+    "id":"zombie",
+    "initialroom":"room2",
+    "killedby":["gun"],
+    "harm":40
+  }
+  ],
+  "player":{
+    "initialroom":"room1"
+  },
+  "objects":[
+    {
+      "name":"gun",
+      "attributes":{"supply value":-1}
+    }
+  ]
+}

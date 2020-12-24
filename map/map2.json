@@ -1,0 +1,69 @@
+{
+  "rooms":[
+  {
+    "id":"room1",
+    "desc":"There is a door to the east.",
+    "e":"room2",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":["gun"],
+    "status":"unlocked"
+  },
+  {
+    "id":"room2",
+    "desc":"You are in another room. There is a door to the north.",
+    "e":"",
+    "s":"",
+    "w":"room1",
+    "n":"room3",
+    "obj":["bullet","apple"],
+    "status":"unlocked"
+  },
+  {
+    "id":"room3",
+    "desc":"There is another door to the north.",
+    "e":"",
+    "s":"room2",
+    "w":"",
+    "n":"room4",
+    "obj":["silver bullet"],
+    "status":"unlocked"
+  }
+  ],
+  "enemies":[
+  {
+    "id":"zombie",
+    "initialroom":"room3",
+    "killedby":["gun","bullet"],
+    "harm":40
+  },
+  {
+    "id":"werewolf",
+    "initialroom":"room4",
+    "killedby":["gun","silver bullet"],
+    "harm":40
+  }
+  ],
+  "player":{
+    "initialroom":"room1"
+  },
+  "objects":[
+    {
+      "name":"apple",
+      "attributes":{"supply value":20}
+    },
+    {
+      "name":"gun",
+      "attributes":{"supply value":-1}
+    },
+    {
+      "name":"bullet",
+      "attributes":{"supply value":-1}
+    },
+    {
+      "name":"silver bullet",
+      "attributes":{"supply value":-1}
+    }
+  ]
+}

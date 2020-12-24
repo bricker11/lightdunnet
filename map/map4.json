@@ -1,0 +1,157 @@
+{
+  "rooms":[
+  {
+    "id":"lobby",
+    "desc":"A sign on a wall says 'I know that's not how you kill that big guy, your lecturer just didn't have time to make up another story.' You have no idea what it is talking about. There is a door to the south.",
+    "e":"",
+    "s":"gunroom",
+    "w":"",
+    "n":"",
+    "obj":["spear","apple"],
+    "status":"unlocked"
+  },
+  {
+    "id":"gunroom",
+    "desc":"You thought you walked south into this room, but the door behind you disappear immediately after you walked through! There is another door to the south.",
+    "e":"",
+    "s":"catroom",
+    "w":"",
+    "n":"",
+    "obj":["gun","bullet","nut","coke"],
+    "status":"unlocked"
+  },
+  {
+    "id":"catroom",
+    "desc":"Again, it seems you can't walk back to the room you came from. There is a door to the south.",
+    "e":"",
+    "s":"architect",
+    "w":"",
+    "n":"",
+    "obj":["cat","red gem"],
+    "status":"unlocked"
+  },
+  {
+    "id":"architect",
+    "desc":"You are in a white room with many TV screens. An old man turns around and says 'I am the architect...' he goes on to speak in a very monotone voice and with many unnecessarily complex words so I'll skip all that. Anyway there are two doors, one to the east and one to the west.",
+    "e":"agentroom",
+    "s":"",
+    "w":"lobby",
+    "n":"",
+    "obj":[],
+    "status":"unlocked"
+  },
+  {
+    "id":"agentroom",
+    "desc":"There is a door to the east.",
+    "e":"grave",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":["green gem","orange"],
+    "status":"unlocked"
+  },
+  {
+    "id":"grave",
+    "desc":"There is a grave here, you can go to north or go back.",
+    "e":"catroom",
+    "s":"",
+    "w":"",
+    "n":"titan",
+    "obj":["axe","coke","key"],
+    "status":"unlocked"
+  },
+  {
+    "id":"titan",
+    "desc":"This room has no exit. Something tells you that what's in front of you must be the big bad.",
+    "e":"",
+    "s":"",
+    "w":"",
+    "n":"",
+    "obj":["blue gem","nut"],
+    "status":"locked"
+  }
+  ],
+  "enemies":[
+  {
+    "id":"agent",
+    "initialroom":"agentroom",
+    "killedby":["gun","bullet"],
+    "harm":40
+  },
+  {
+    "id":"big guy",
+    "initialroom":"titan",
+    "killedby":["red gem","green gem","blue gem"],
+    "harm":60
+  },
+  {
+    "id":"Kobold",
+    "initialroom":"catroom",
+    "killedby":["spear"],
+    "harm":35
+  },
+  {
+    "id":"mummy",
+    "initialroom":"grave",
+    "killedby":["cat"],
+    "harm":55
+  }
+  ],
+  "player":{
+    "initialroom":"lobby"
+  },
+  "objects":[
+  {
+    "name":"apple",
+    "attributes":{"supply value":20}
+  },
+  {
+    "name":"orange",
+    "attributes":{"supply value":30}
+  },
+  {
+    "name":"nut",
+    "attributes":{"supply value":10}
+  },
+  {
+    "name":"coke",
+    "attributes":{"supply value":50}
+  },
+  {
+    "name":"spear",
+    "attributes":{"supply value":-1}
+  },
+  {
+    "name":"gun",
+    "attributes":{"supply value":-1}
+  },
+  {
+    "name":"bullet",
+    "attributes":{"supply value":-1}
+  },
+  {
+    "name":"cat",
+    "attributes":{"supply value":-1}
+  },
+  {
+    "name":"red gem",
+    "attributes":{"supply value":-1}
+  },
+  {
+    "name":"green gem",
+    "attributes":{"supply value":-1}
+  },
+  {
+    "name":"axe",
+    "attributes":{"supply value":-1}
+  },
+  {
+    "name":"key",
+    "attributes":{"supply value":-1}
+  },
+  {
+    "name":"blue gem",
+    "attributes":{"supply value":-1}
+  }
+  ]
+}
